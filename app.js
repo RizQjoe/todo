@@ -12,7 +12,7 @@ var users = require('./routes/users');
 var app = express();
 
 
-// ====== cara mengconnect db ke Mongoose =============
+// ====== Connect db ke Mongoose =============
 mongoose.connect('mongodb://localhost/todoDB', (err) => {
   if (err) {
     console.log('gagal connect ke databse', err)
@@ -20,8 +20,6 @@ mongoose.connect('mongodb://localhost/todoDB', (err) => {
     console.log('database connected !')
   }
 })
-
-
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
